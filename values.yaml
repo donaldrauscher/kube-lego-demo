@@ -1,0 +1,6 @@
+
+domain: donaldrauscher.com
+
+lego:
+  server: https://acme-v01.api.letsencrypt.org/directory
+  email: donald.rauscher@gmail.com
