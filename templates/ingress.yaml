@@ -4,13 +4,12 @@ metadata:
   name: test-ingress
   annotations:
     kubernetes.io/ingress.global-static-ip-name: test-static-ip
-    #kubernetes.io/ingress.class: "nginx"
-    #kubernetes.io/tls-acme: "true"
+    kubernetes.io/tls-acme: "true"
 spec:
-  # tls:
-  # - secretName: test-cert
-  #   hosts:
-  #   - test.{{ .Values.domain }}
+  tls:
+  - secretName: test-cert
+    hosts:
+    - test.{{ .Values.domain }}
   rules:
   - host: test.{{ .Values.domain }}
     http:
